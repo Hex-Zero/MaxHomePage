@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.max-main-container {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+}
+
 #maxLoadingAnimation {
   position: absolute;
   top: 0;
@@ -14,7 +21,7 @@
   justify-content: center;
   align-items: center;
   background-color: whitesmoke;
-  animation: animateLoadingHide 5.3s forwards;
+  animation: animateLoadingHide 15.3s forwards;
 }
 
 #maxLoadingBar {
@@ -26,10 +33,26 @@
   animation: animateLoadingBar 4s 0.3s forwards;
 }
 
-.max-intro-secition {
-  background-color: rgb(33, 178, 245);
+section {
+  scroll-snap-align: center;
   width: 100vw;
   height: 100vh;
+}
+
+.max-intro-section {
+  background-color: rgb(142, 219, 255);
+}
+
+.max-stats-section {
+  background-color: rgb(142, 255, 199);
+}
+
+.max-projects-section {
+  background-color: rgb(142, 219, 255);
+}
+
+.max-contact-section {
+  background-color: rgb(142, 255, 202);
 }
 
 @keyframes animateLoadingBar {
@@ -62,5 +85,6 @@
   }
   100% {
     opacity: 0;
+    z-index: -100;
   }
 }
