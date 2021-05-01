@@ -5,11 +5,16 @@
 }
 
 #maxLoadingAnimation {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: whitesmoke;
+  animation: animateLoadingHide 5.3s forwards;
 }
 
 #maxLoadingBar {
@@ -19,6 +24,12 @@
   top: 0;
   left: 0;
   animation: animateLoadingBar 4s 0.3s forwards;
+}
+
+.max-intro-secition {
+  background-color: rgb(33, 178, 245);
+  width: 100vw;
+  height: 100vh;
 }
 
 @keyframes animateLoadingBar {
@@ -39,5 +50,17 @@
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes animateLoadingHide {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
