@@ -2,7 +2,7 @@ gsap.registerPlugin(ScrollTrigger);
 function goToSection(i, anim) {
   gsap.to(window, {
     scrollTo: { y: i * innerHeight, autoKill: false },
-    duration: 0.5,
+    duration: 0.2,
   });
 
   if (anim) {
