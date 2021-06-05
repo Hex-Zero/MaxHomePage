@@ -5,13 +5,13 @@
 }
 
 html {
-  scroll-behavior: smooth;
 }
 
-.box {
-  width: 200px;
-  height: 200px;
-  background-color: rebeccapurple;
+.max-main-container {
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 
 ::-webkit-scrollbar {
@@ -65,6 +65,7 @@ html {
 }
 
 section {
+  scroll-snap-align: center;
   height: 100vh;
 }
 
@@ -124,6 +125,6 @@ section {
     overflow: hidden;
   }
   100% {
-    overflow: initial;
+    overflow: scroll;
   }
 }
