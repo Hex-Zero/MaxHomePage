@@ -5,6 +5,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
 }
 
 .max-main-container {
@@ -125,6 +126,6 @@ section {
     overflow: hidden;
   }
   100% {
-    overflow: scroll;
+    overflow-y: scroll;
   }
 }
