@@ -1,7 +1,26 @@
 var $statusComponent = $("#statusComponentTemplate").detach();
 
-function createStatus(component, statusTitle, statusPercentage) {
-  var $status = component.clone().attr("id", "");
+var statusArray = [
+  {
+    statusTitle: "Css / js",
+    statusPercentage: 70,
+  },
+  {
+    statusTitle: "C#",
+    statusPercentage: 60,
+  },
+  {
+    statusTitle: "JavaScrip",
+    statusPercentage: 90,
+  },
+  {
+    statusTitle: "Reack",
+    statusPercentage: 80,
+  },
+];
+
+function createStatus(statusTitle, statusPercentage) {
+  var $status = $statusComponent.clone().attr("id", "");
   var _statusPercentage = statusPercentage > 100 ? 100 : statusPercentage;
   if (_statusPercentage >= 50) {
     $status
@@ -10,7 +29,7 @@ function createStatus(component, statusTitle, statusPercentage) {
         "background",
         `linear-gradient(${
           90 + (360 / 100) * (_statusPercentage - 50)
-        }deg,rgba(7, 7, 7, 0) 0%,rgba(3, 3, 3, 0) 50%,rgba(2, 2, 2, 1) 51%,rgba(0, 0, 0, 1) 100%)`
+        }deg,rgba(7, 7, 7, 0) 0%,rgba(3, 3, 3, 0) 48%,rebeccapurple 49%,rebeccapurple 100%)`
       );
   } else {
     $status
@@ -23,11 +42,9 @@ function createStatus(component, statusTitle, statusPercentage) {
       );
   }
   $status.find(".max-status-number").html(statusPercentage + "%");
-  return $status;
+  $(".max-status-container").append($status);
 }
 
-for (i = 0; i < 7; i++) {
-  $(".max-status-container").append(
-    createStatus($statusComponent, "status " + i, 1 + i * 25)
-  );
-}
+statusArray.forEach((e) => {
+  createStatus(e.statusTitle, e.statusPercentage);
+});

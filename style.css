@@ -116,11 +116,7 @@ html {
 }
 
 .max-status-outer-circul {
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
+  background: linear-gradient(90deg, rebeccapurple 0%, rebeccapurple 100%);
 }
 
 .max-status-outer-layer-2 {
