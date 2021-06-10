@@ -150,7 +150,7 @@ section {
 }
 
 .max-intro-section {
-  background-color: rgb(225, 214, 255);
+  animation: backgroundPulsing 5s ease infinite forwards;
 }
 
 .max-status-section {
@@ -206,5 +206,52 @@ section {
   }
   100% {
     overflow-y: scroll;
+  }
+}
+
+@keyframes backgroundPulsing {
+  0% {
+    background-image: radial-gradient(
+        circle at center center,
+        rgba(0, 0, 0, 0),
+        rgb(31, 0, 47)
+      ),
+      repeating-linear-gradient(
+        151deg,
+        rgb(31, 0, 47) 0px,
+        rgb(31, 0, 47) 1px,
+        transparent 1px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        61deg,
+        rgb(111, 42, 105) 0px,
+        rgb(111, 42, 105) 5px,
+        transparent 5px,
+        transparent 6px
+      ),
+      linear-gradient(106deg, rgb(31, 0, 47), rgb(31, 0, 47));
+  }
+  100% {
+    background-image: radial-gradient(
+        circle at center center,
+        rgba(0, 0, 0, 0),
+        rgb(31, 0, 47)
+      ),
+      repeating-linear-gradient(
+        151deg,
+        rgb(31, 0, 47) 0px,
+        rgb(31, 0, 47) 1px,
+        transparent 1px,
+        transparent 4px
+      ),
+      repeating-linear-gradient(
+        61deg,
+        rgb(85, 17, 79) 0px,
+        rgb(111, 42, 105) 5px,
+        transparent 5px,
+        transparent 6px
+      ),
+      linear-gradient(106deg, rgb(31, 0, 47), rgb(31, 0, 47));
   }
 }

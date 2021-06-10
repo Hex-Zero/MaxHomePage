@@ -42,6 +42,7 @@ function createStatus(statusTitle, statusPercentage) {
       );
   }
   $status.find(".max-status-number").html(statusPercentage + "%");
+  $status.find(".max-status-title").html(statusTitle);
   $(".max-status-container").append($status);
 }
 
